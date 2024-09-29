@@ -4,7 +4,7 @@
 
 .container {
   position: relative;
-  height: 300vh;
+  height: 200vh;
   background-color: rgb(255, 255, 255);
 }
 
@@ -16,8 +16,8 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-  mask-image: url("/assets/medias/mask.svg");
-  mask-position: 52.35% center;
+  mask-image: url("/assets/medias/custom.svg");
+  mask-position: 53.5% center;
   mask-repeat: no-repeat;
   mask-size: 80%;
 }
