@@ -74,10 +74,7 @@ export default function Landing() {
       >
         <div className="w-16 h-16 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
       </div>
-      <div
-        ref={contentRef}
-        className="relative h-screen w-full overflow-hidden opacity-0"
-      >
+      <div ref={contentRef} className="relative h-screen w-full opacity-0">
         <video
           autoPlay
           loop
@@ -103,10 +100,7 @@ export default function Landing() {
                 "PRODUCTOS Y SERVICIOS",
                 "AGRÍCOLAS A GRAN ESCALA",
               ].map((line, lineIndex) => (
-                <div
-                  key={lineIndex}
-                  className="line overflow-hidden whitespace-nowrap"
-                >
+                <div key={lineIndex} className="line  whitespace-nowrap">
                   {line.split("").map((char, charIndex) => (
                     <span
                       key={charIndex}

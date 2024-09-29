@@ -1,63 +1,52 @@
 "use client";
-
-import { useEffect, useRef } from "react";
+import { useRef, useEffect } from "react";
 import styles from "../../styles/section1.module.css";
 
 export default function Section1() {
-  const container = useRef<HTMLDivElement>(null);
-  const stickyMask = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLDivElement | null>(null);
+  const stickyMask = useRef<HTMLDivElement | null>(null);
 
-  const initialMaskSize = 80;
+  const initialMaskSize = 0.8;
   const targetMaskSize = 30;
   const easing = 0.15;
-  const easedScrollProgressRef = useRef(0);
+  let easedScrollProgress = 0;
+
+  useEffect(() => {
+    requestAnimationFrame(animate);
+  }, []);
 
   const animate = () => {
-    const maskSizeProgress = targetMaskSize * getScrollProgress();
-
     if (stickyMask.current) {
-      const newMaskSize = Math.max(initialMaskSize - maskSizeProgress, 50); // Prevent the mask from becoming too small
-      stickyMask.current.style.maskSize = `${newMaskSize}%`;
-      stickyMask.current.style.webkitMaskSize = `${newMaskSize}%`;
+      const maskSizeProgress = targetMaskSize * getScrollProgress();
+      stickyMask.current.style.maskSize =
+        (initialMaskSize + maskSizeProgress) * 100 + "%";
+      stickyMask.current.style.maskSize =
+        (initialMaskSize + maskSizeProgress) * 100 + "%";
     }
-
     requestAnimationFrame(animate);
   };
 
   const getScrollProgress = () => {
-    if (container.current) {
-      const rect = container.current.getBoundingClientRect();
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const offsetTop = rect.top + scrollTop;
+    if (stickyMask.current && container.current) {
       const scrollProgress =
-        (scrollTop - offsetTop) / (rect.height - window.innerHeight);
-
-      const delta = scrollProgress - easedScrollProgressRef.current;
-      easedScrollProgressRef.current += delta * easing;
-
-      return Math.min(Math.max(easedScrollProgressRef.current, 0), 1); // Clamp between 0 and 1
+        stickyMask.current.offsetTop /
+        (container.current.getBoundingClientRect().height - window.innerHeight);
+      const delta = scrollProgress - easedScrollProgress;
+      easedScrollProgress += delta * easing;
+      return easedScrollProgress;
     }
     return 0;
   };
 
-  useEffect(() => {
-    const animationFrameId = requestAnimationFrame(animate);
-
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, []);
-
   return (
-    <div className={styles.main}>
+    <main className={styles.main}>
       <div ref={container} className={styles.container}>
         <div ref={stickyMask} className={styles.stickyMask}>
-          <video autoPlay muted loop playsInline>
+          <video autoPlay muted loop>
             <source src="/assets/medias/nature.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
