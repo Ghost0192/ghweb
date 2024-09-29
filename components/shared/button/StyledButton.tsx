@@ -6,7 +6,7 @@ export default function StyledButton() {
     <Button
       variant="default"
       size="lg"
-      className="bg-emerald-950 hover:bg-green-700 text-white text-base font-semibold rounded-full px-6 py-3 transition-colors duration-300 flex items-center gap-2"
+      className="bg-[#094F30] hover:bg-[#82BB27] text-white text-base font-semibold rounded-full px-6 py-3 transition-colors duration-300 flex items-center gap-2"
     >
       CONOCE MÁS
       <ArrowUpRight className="w-5 h-5" />
