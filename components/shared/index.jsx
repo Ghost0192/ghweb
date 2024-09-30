@@ -1,11 +1,11 @@
 "use client";
 import styles from "./style.module.scss";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { opacity, background } from "./anim";
 import Nav from "./nav";
+import Image from "next/image";
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
@@ -20,14 +20,14 @@ export default function Header() {
             width={35}
             height={15}
             priority
-            className="transform -translate-y-0.5" // Adjust this value as needed
+            className="transform -translate-y-0.5"
           />
         </Link>
         <div
           onClick={() => {
             setIsActive(!isActive);
           }}
-          className={`${styles.el} flex items-center`}
+          className={styles.el}
         >
           <div
             className={`${styles.burger} ${
