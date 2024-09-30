@@ -33,25 +33,26 @@ export default function Home() {
 
   return (
     <div className="min-h-screen ">
-      <section className="h-screen w-full">
+      <section className=" h-screen w-full">
         <Landing />
       </section>
       <section className="h-screen w-full">
         <Section1 />
       </section>
-      <section className="h-screen w-full bg-black flex items-center justify-center">
+      <section className="h-screen w-full"></section>
+      <section className="h-screen w-full bg-gray-300 flex items-center justify-center">
         <Section2 />
       </section>
-      <section className="h-screen w-full bg-gray-300 flex items-center justify-center">
+      <section className="h-screen w-full bg-blue-300 flex items-center justify-center">
         <Section3 />
       </section>
-      <section className="h-screen w-full bg-black flex items-center justify-center">
+      <section className="h-screen w-full bg-red-300 flex items-center justify-center">
         <Section4 />
       </section>
       <section className="h-screen w-full bg-gray-300 flex items-center justify-center">
         <Section5 />
       </section>
-      <section className="h-screen w-full bg-black flex items-center justify-center">
+      <section className="h-screen w-full bg-yellow-300 flex items-center justify-center">
         <h2 className="text-4xl font-bold">Section 3</h2>
       </section>
       <Footer />
