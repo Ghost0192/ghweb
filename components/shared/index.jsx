@@ -1,6 +1,7 @@
 "use client";
 import styles from "./style.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { opacity, background } from "./anim";
@@ -11,13 +12,22 @@ export default function Header() {
 
   return (
     <div className={styles.header}>
-      <div className={styles.bar}>
-        <Link href="/">GRUPO HIJUELAS</Link>
+      <div className={`${styles.bar} flex items-center justify-between`}>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/assets/images/gh_l_b_c.png"
+            alt="GRUPO HIJUELAS"
+            width={35}
+            height={15}
+            priority
+            className="transform -translate-y-0.5" // Adjust this value as needed
+          />
+        </Link>
         <div
           onClick={() => {
             setIsActive(!isActive);
           }}
-          className={styles.el}
+          className={`${styles.el} flex items-center`}
         >
           <div
             className={`${styles.burger} ${
