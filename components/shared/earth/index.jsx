@@ -29,7 +29,7 @@ export default function Earth() {
   const scene = useRef(null);
 
   return (
-    <div ref={scene} className="w-full h-screen">
+    <div ref={scene} className="w-full h-full">
       <Canvas>
         <ambientLight intensity={0.1} />
         <directionalLight intensity={3.5} position={[1, 0, -0.25]} />
