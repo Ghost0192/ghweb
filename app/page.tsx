@@ -39,7 +39,7 @@ export default function Home() {
       <section className="h-screen w-full">
         <Section1 />
       </section>
-      <section>
+      <section className="h-screen w-full bg-yellow-300 flex items-center justify-center overflow-hidden">
         <Section2 />
       </section>
       <section className="h-screen w-full bg-blue-300 flex items-center justify-center overflow-hidden">
