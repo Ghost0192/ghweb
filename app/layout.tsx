@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Header from "../components/shared";
+import { Inter } from "next/font/google";
 
 import { ThemeLanguageProvider } from "../context/language";
 
@@ -18,6 +19,12 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Grupo Hijuelas",
   description:
@@ -32,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}antialiased`}
       >
         <ThemeLanguageProvider>
           <Header />
