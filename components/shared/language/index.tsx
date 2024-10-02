@@ -6,22 +6,18 @@ import { Button } from "@/components/ui/button";
 export default function LanguageComponent() {
   const { language, setLanguage } = useLanguage();
 
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "es" : "en");
+  };
+
   return (
-    <div className="p-4">
-      <div className="space-x-2">
-        <Button
-          onClick={() => setLanguage("en")}
-          variant={language === "en" ? "default" : "outline"}
-        >
-          English
-        </Button>
-        <Button
-          onClick={() => setLanguage("es")}
-          variant={language === "es" ? "default" : "outline"}
-        >
-          Español
-        </Button>
-      </div>
-    </div>
+    <Button
+      onClick={toggleLanguage}
+      variant="outline"
+      size="sm"
+      className="bg-gray-800 text-gray-200 hover:bg-gray-700 hover:text-gray-100 text-xs font-medium px-3 py-1.5 rounded-md border-none"
+    >
+      {language === "en" ? "EN / ES" : "ES / EN"}
+    </Button>
   );
 }

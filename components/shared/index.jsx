@@ -52,10 +52,7 @@ export default function Header() {
           animate={!isActive ? "open" : "closed"}
           className={styles.shopContainer}
         >
-          <p className={styles.shop}>Shop</p>
-          <div className={styles.el}>
-            <LanguageComponent />
-          </div>
+          <div className={styles.el}>{!isActive && <LanguageComponent />}</div>
         </motion.div>
       </div>
       <motion.div

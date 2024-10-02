@@ -40,10 +40,6 @@
       gap: 30px;
       position: absolute;
       right: 0;
-
-      .shop {
-        display: none;
-      }
     }
 
     .el {
@@ -113,11 +109,6 @@
 
     .bar {
       font-size: 15px;
-    }
-
-    .shop {
-      display: block;
-      cursor: pointer;
     }
   }
 }
