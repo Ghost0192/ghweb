@@ -12,7 +12,11 @@ export default function Header() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className={styles.header}>
+    <div
+      className={`${styles.header} ${
+        !isActive ? "bg-transparent" : "bg-[#094f30]"
+      } transition-colors duration-300`}
+    >
       <div className={`${styles.bar} flex items-center justify-between`}>
         <Link href="/" className="flex items-center">
           <Image
@@ -52,7 +56,9 @@ export default function Header() {
           animate={!isActive ? "open" : "closed"}
           className={styles.shopContainer}
         >
-          <div className={styles.el}>{!isActive && <LanguageComponent />}</div>
+          <div className={`${styles.el}`}>
+            {!isActive && <LanguageComponent />}
+          </div>
         </motion.div>
       </div>
       <motion.div
