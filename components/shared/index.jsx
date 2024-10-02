@@ -15,17 +15,17 @@ export default function Header() {
     <div
       className={`${styles.header} ${
         !isActive ? "bg-transparent" : "bg-[#094f30]"
-      } transition-colors duration-300`}
+      } transition-colors duration-300 py-4`}
     >
       <div className={`${styles.bar} flex items-center justify-between`}>
         <Link href="/" className="flex items-center">
           <Image
             src="/assets/images/gh_l_b_c.png"
             alt="GRUPO HIJUELAS"
-            width={35}
-            height={15}
+            width={50}
+            height={50}
             priority
-            className="transform -translate-y-0.5"
+            className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 object-contain"
           />
         </Link>
         <div
