@@ -4,11 +4,28 @@ import React, { useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { gsap } from "gsap";
 import StyledButton from "@/components/shared/button/StyledButton";
+import { useLanguage } from "../../context/language";
+
+const texts = {
+  en: [
+    "WE DEVELOP",
+    "WITH EXCELLENCE",
+    "AGRICULTURAL PRODUCTS",
+    "& SERVICES AT LARGE SCALE",
+  ],
+  es: [
+    "DESARROLLAMOS",
+    "CON EXCELENCIA",
+    "PRODUCTOS Y SERVICIOS",
+    "AGRÍCOLAS A GRAN ESCALA",
+  ],
+};
 
 export default function Landing() {
   const loadingRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
+  const { theme, language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -64,15 +81,21 @@ export default function Landing() {
       },
       "-=0.5"
     );
-  }, []);
+  }, [language]); // Re-run the animation when language changes
+
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "es" : "en");
+  };
 
   return (
     <>
       <div
         ref={loadingRef}
-        className="fixed inset-0 bg-black z-50 flex items-center justify-center"
+        className={`fixed inset-0 ${
+          theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+        } z-50 flex items-center justify-center`}
       >
-        <div className="w-16 h-16 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+        <div>GRUPO HIJUELAS</div>
       </div>
       <div ref={contentRef} className="relative h-screen w-full opacity-0">
         <video
@@ -94,13 +117,8 @@ export default function Landing() {
               ref={textRef}
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold text-white leading-tight mb-6"
             >
-              {[
-                "DESARROLLAMOS",
-                "CON EXCELENCIA",
-                "PRODUCTOS Y SERVICIOS",
-                "AGRÍCOLAS A GRAN ESCALA",
-              ].map((line, lineIndex) => (
-                <div key={lineIndex} className="line  whitespace-nowrap">
+              {texts[language].map((line, lineIndex) => (
+                <div key={lineIndex} className="line whitespace-nowrap">
                   {line.split("").map((char, charIndex) => (
                     <span
                       key={charIndex}
@@ -119,9 +137,18 @@ export default function Landing() {
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 text-white text-center">
-          <p className="text-sm mb-2">Scroll Down</p>
+          <p className="text-sm mb-2">
+            {language === "en" ? "Scroll Down" : "Desplázate hacia abajo"}
+          </p>
           <ChevronDown className="w-6 h-6 mx-auto animate-bounce" />
         </div>
+
+        <button
+          onClick={toggleLanguage}
+          className="absolute top-4 right-4 z-30 bg-white text-black px-4 py-2 rounded"
+        >
+          {language === "en" ? "ES" : "EN"}
+        </button>
       </div>
     </>
   );

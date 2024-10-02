@@ -15,7 +15,7 @@ const links = [
   },
   {
     title: `Products & Services`,
-    href: "/productandservices",
+    href: "/products-and-services",
     src: "shop.png",
   },
   {

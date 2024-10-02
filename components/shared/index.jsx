@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { opacity, background } from "./anim";
 import Nav from "./nav";
 import Image from "next/image";
+import LanguageComponent from "./language";
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
@@ -46,6 +47,16 @@ export default function Header() {
             </motion.p>
           </div>
         </div>
+        <motion.div
+          variants={opacity}
+          animate={!isActive ? "open" : "closed"}
+          className={styles.shopContainer}
+        >
+          <p className={styles.shop}>Shop</p>
+          <div className={styles.el}>
+            <LanguageComponent />
+          </div>
+        </motion.div>
       </div>
       <motion.div
         variants={background}
