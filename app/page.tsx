@@ -45,7 +45,7 @@ export default function Home() {
       <section className="h-screen w-full bg-blue-300 flex items-center justify-center overflow-hidden">
         <Section3 />
       </section>
-      <section className="h-screen w-full bg-red-300 flex items-center justify-center overflow-hidden">
+      <section className="h-screen w-full bg-black ">
         <Section4 />
       </section>
       <section className="h-screen w-full bg-gray-300 flex items-center justify-center overflow-hidden">
