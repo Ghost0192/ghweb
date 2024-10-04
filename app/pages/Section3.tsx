@@ -13,8 +13,8 @@ export default function Section3() {
         {/* Description Section with Bold Black Text */}
         <p className="text-3xl font-bold text-black leading-snug mt-6">
           Our model contemplates full vertical integration, ensuring the quality
-          of our products and enabling rapid scalability to meet our client's
-          needs.
+          of our products and enabling rapid scalability to meet our
+          clients&apos; needs.
         </p>
       </div>
 
