@@ -39,16 +39,16 @@ export default function Home() {
       <section className="h-screen w-full">
         <Section1 />
       </section>
-      <section className="h-screen w-full bg-yellow-300 flex items-center justify-center overflow-hidden">
+      <section className="h-screen w-full bg-white overflow-hidden mt-[100vh]">
         <Section2 />
       </section>
       <section className="h-screen w-full bg-blue-300 flex items-center justify-center overflow-hidden">
         <Section3 />
       </section>
-      <section className="h-[210vh] w-full bg-black">
+      <section className="h-[210vh] w-full bg-black ">
         <Section4 />
       </section>
-      <section className="h-screen w-full bg-gray-300 flex items-center justify-center overflow-hidden">
+      <section className="h-[170vh] custom:h-screen w-full overflow-hidden">
         <Section5 />
       </section>
       <section className="h-screen w-full bg-yellow-300 flex items-center justify-center overflow-hidden">

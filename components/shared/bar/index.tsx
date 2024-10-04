@@ -1,6 +1,6 @@
 import React from "react";
 
-const bar = () => {
+const Bar = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 pt-12 pb-0 min-h-full flex flex-col">
       <header className="flex justify-between items-center ">
@@ -12,4 +12,4 @@ const bar = () => {
   );
 };
 
-export default bar;
+export default Bar;
