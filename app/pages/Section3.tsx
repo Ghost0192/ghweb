@@ -1,5 +1,5 @@
 import React from "react";
-export default function AppleServices() {
+export default function Section3() {
   return (
     <div>
       {/* Header Section */}
