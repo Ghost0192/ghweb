@@ -221,39 +221,6 @@ function Earth({
   );
 }
 
-interface PointProps {
-  position: THREE.Vector3;
-  label: string;
-  description: string;
-}
-
-function Point({ position, label, description }: PointProps) {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <group position={position}>
-      <Html
-        center
-        occlude
-        style={{
-          transition: "all 0.2s",
-          opacity: isHovered ? 1 : 0.8,
-          transform: `scale(${isHovered ? 1.1 : 1})`,
-        }}
-      >
-        <div
-          className={styles.point}
-          onPointerEnter={() => setIsHovered(true)}
-          onPointerLeave={() => setIsHovered(false)}
-        >
-          <div className={styles.label}>{label}</div>
-          {isHovered && <div className={styles.text}>{description}</div>}
-        </div>
-      </Html>
-    </group>
-  );
-}
-
 function DraggableEarth() {
   const { size, camera } = useThree();
   const groupRef = useRef<THREE.Group>(null);
