@@ -20,15 +20,18 @@ const Section5 = () => {
       <div className="bg-white max-w-6xl mx-auto px-4 pt-12 pb-0 min-h-full flex flex-col">
         <header className="flex justify-between items-center mb-0">
           <h1 className="text-2xl font-light">Our Presence</h1>
-          <div className="text-sm">02</div>
+          <div className="text-sm">03</div>
         </header>
-        <hr className="border-gray-700 mb-8" />
-        <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/2 h-[calc(100vh-12rem)] md:h-[calc(100vh-16rem)]">
+        <hr className="border-gray-700 mt-4 mb-8" />
+        <p className="text-5xl font-bold mb-12 md:mb-8 text-center">
+          We deliver worldwide from our main locations
+        </p>
+        <div className="flex flex-col md:flex-row flex-grow">
+          <div className="w-full md:w-1/2 h-[calc(100vh-24rem)] md:h-[calc(100vh-28rem)]">
             <Globe3D />
           </div>
-          <div className="w-full md:w-1/2 p-6 overflow-y-auto h-[calc(100vh-12rem)] md:h-[calc(100vh-16rem)] flex flex-col justify-center">
-            <div className="space-y-8 md:-mt-16">
+          <div className="w-full md:w-1/2 p-6 overflow-y-auto h-[calc(100vh-24rem)] md:h-[calc(100vh-28rem)] flex flex-col justify-center">
+            <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold mb-2">Chile</h2>
                 <p>
