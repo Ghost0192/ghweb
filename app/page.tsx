@@ -1,22 +1,21 @@
 "use client";
-import Landing from "./pages/Landing";
-import Section1 from "./pages/Section1";
-import Section2 from "./pages/Section2";
-import Footer from "../components/shared/footer/index";
-import Section3 from "./pages/Section3";
-import Section4 from "./pages/Section4";
-import Section5 from "./pages/Section5";
 
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import Landing from "./pages/Landing";
+import Section1 from "./pages/Section1";
+import Section2 from "./pages/Section2";
+import Section3 from "./pages/Section3";
+import Section4 from "./pages/Section4";
+import Section5 from "./pages/Section5";
+import Footer from "../components/shared/footer/index";
 
 export default function Home() {
   useEffect(() => {
-    // Configure Lenis to adjust the smoothness and scroll speed
     const lenis = new Lenis({
-      duration: 1.2, // The lower the value, the slower the scroll
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing function for smoothness
-      smoothWheel: true, // Enable smooth scrolling with the mouse wheel
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
     });
 
     function raf(time: number) {
@@ -27,36 +26,36 @@ export default function Home() {
     requestAnimationFrame(raf);
 
     return () => {
-      lenis.destroy(); // Clean up Lenis when the component unmounts
+      lenis.destroy();
     };
   }, []);
 
   return (
-    <div className="min-h-screen overscroll-none">
-      <section className="h-screen w-full overflow-hidden">
+    <div className="min-h-screen">
+      <section className="min-h-screen w-full">
         <Landing />
       </section>
-      <section className="h-screen w-full">
+      <section className="min-h-screen w-full">
         <Section1 />
       </section>
-      <section className="h-screen w-full bg-black overflow-hidden mt-[100vh]">
+      <section className="min-h-screen w-full bg-black">
         <Section2 />
       </section>
-      <section className="h-[210vh] md:h-[130vh] w-full overflow-hidden">
+      <section className="w-full bg-white">
         <Section3 />
       </section>
-      <section className="h-[155vh] md:h-[110vh] w-full bg-black ">
+      <section className="w-full bg-black ">
         <Section4 />
       </section>
-      <section className="h-[170vh] custom:h-screen w-full overflow-hidden">
+      <section className="min-h-screen w-full">
         <Section5 />
       </section>
-      <section className="h-[100vh] w-full bg-yellow-300 flex items-center justify-center overflow-none">
-        <h2 className="text-4xl font-bold">Section 3</h2>
+      <section className="min-h-screen w-full bg-yellow-300 flex items-center justify-center">
+        <h2 className="text-4xl font-bold">Section 6</h2>
       </section>
-      <div className="bg-[#094F30]">
+      <section className="bg-[#094F30]">
         <Footer />
-      </div>
+      </section>
     </div>
   );
 }

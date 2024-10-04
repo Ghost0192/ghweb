@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import styles from "../../styles/section4.module.scss";
 
 export default function Section4() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -97,35 +96,27 @@ export default function Section4() {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className={`${styles.container} bg-black text-white h-[300vh] overflow-y-auto`}
-    >
-      <div className="max-w-6xl mx-auto px-4 pt-12 pb-0 min-h-full flex flex-col">
-        <header className="flex justify-between items-center ">
-          <h1 className="text-2xl font-light">Our Values</h1>
-          <div className="text-sm">02</div>
+    <div ref={sectionRef} className={` bg-black text-white`}>
+      <div className="max-w-7xl mx-auto px-4 py-24">
+        <header className="flex justify-between items-center mb-16">
+          <h1 className="text-4xl font-light">Our Values</h1>
+          <div className="text-xl">02</div>
         </header>
-        <hr className=" border-gray-700 pb-16" />
-        <div className="flex-grow flex flex-col ">
+        <hr className="border-gray-700 mb-24" />
+        <div className="space-y-64">
           {values.map((value, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row md:space-x-8 mb-24 md:mb-32 last:mb-0"
+              className="flex flex-col lg:flex-row lg:space-x-16"
             >
-              <div className="md:w-2/5 mb-4 md:mb-0">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold sticky top-24">
+              <div className="lg:w-1/2 mb-8 lg:mb-0">
+                <h2 className="text-6xl lg:text-7xl xl:text-8xl font-bold lg:sticky lg:top-24">
                   {splitWords(value.title, titleRefs)}
                 </h2>
               </div>
-              <div className="md:w-3/5 space-y-4">
+              <div className="lg:w-1/2 space-y-8">
                 {value.content.map((paragraph, pIndex) => (
-                  <p
-                    key={pIndex}
-                    className={`text-xl font-light ${
-                      pIndex === 1 ? "text-white" : "text-gray-300"
-                    }`}
-                  >
+                  <p key={pIndex} className="text-2xl font-light text-gray-300">
                     {splitWords(paragraph, contentRefs)}
                   </p>
                 ))}

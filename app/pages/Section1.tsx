@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useCallback, useState } from "react";
-import styles from "../../styles/section1.module.css";
+import styles from "../../styles/section1.module.scss";
 
 export default function Section1() {
   const container = useRef<HTMLDivElement | null>(null);
@@ -45,7 +45,7 @@ export default function Section1() {
   }, [getScrollProgress]);
 
   return (
-    <main className={styles.main}>
+    <main>
       <div ref={container} className={styles.container}>
         <div ref={stickyMask} className={styles.stickyMask}>
           <video autoPlay muted loop>

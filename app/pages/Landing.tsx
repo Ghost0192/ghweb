@@ -9,9 +9,9 @@ import { useLanguage } from "../../context/language";
 const texts = {
   en: [
     "WE DEVELOP",
-    "WITH EXCELLENCE",
     "AGRICULTURAL PRODUCTS",
-    "& SERVICES AT LARGE SCALE",
+    "& SERVICES WITH EXCELLENCE",
+    "AT LARGE SCALE",
   ],
   es: [
     "DESARROLLAMOS",
