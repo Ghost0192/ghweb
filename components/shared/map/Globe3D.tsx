@@ -2,7 +2,7 @@
 
 import React, { useRef, useMemo, useEffect, useState } from "react";
 import { Canvas, useFrame, useThree, ThreeEvent } from "@react-three/fiber";
-import { Html, Sphere, useTexture } from "@react-three/drei";
+import { Sphere, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import styles from "./style.module.scss";
 
