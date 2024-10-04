@@ -20,7 +20,7 @@ export const ThemeLanguageProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [theme, setTheme] = useState<Theme>("dark");
-  const [language, setLanguage] = useState<Language>("es");
+  const [language, setLanguage] = useState<Language>("en"); // Changed default to "en"
 
   return (
     <ThemeLanguageContext.Provider
