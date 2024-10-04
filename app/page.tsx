@@ -42,7 +42,7 @@ export default function Home() {
       <section className="h-screen w-full bg-black overflow-hidden mt-[100vh]">
         <Section2 />
       </section>
-      <section className="h-[130vh] w-full overflow-hidden">
+      <section className="h-[210vh] md:h-[130vh] w-full overflow-hidden">
         <Section3 />
       </section>
       <section className="h-[155vh] md:h-[110vh] w-full bg-black ">
