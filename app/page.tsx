@@ -36,7 +36,7 @@ export default function Home() {
         <section className="h-[100svh] w-full overflow-hidden">
           <Landing />
         </section>
-        <section className="min-h-[100svh] w-full">
+        <section className=" w-full">
           <Section1 />
         </section>
         <section className="min-h-[100svh] w-full bg-black">
