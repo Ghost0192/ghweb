@@ -6,7 +6,7 @@ import { Sphere, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import styles from "./style.module.scss";
 
-// Updated Earth Vertex Shader
+// Earth Vertex Shader
 const earthVertexShader = `
 varying vec2 vUv;
 varying vec3 vNormal;
@@ -14,21 +14,16 @@ varying vec3 vPosition;
 
 void main()
 {
-    // Position
     vec4 modelPosition = modelMatrix * vec4(position, 1.0);
     gl_Position = projectionMatrix * viewMatrix * modelPosition;
-
-    // Model normal
     vec3 modelNormal = (modelMatrix * vec4(normal, 0.0)).xyz;
-
-    // Varyings
     vUv = uv;
     vNormal = modelNormal;
     vPosition = modelPosition.xyz;
 }
 `;
 
-// Updated Earth Fragment Shader
+// Earth Fragment Shader
 const earthFragmentShader = `
 uniform sampler2D uDayTexture;
 uniform sampler2D uNightTexture;
@@ -47,33 +42,25 @@ void main()
     vec3 normal = normalize(vNormal);
     vec3 color = vec3(0.0);
 
-    // Sun orientation
     float sunOrientation = dot(uSunDirection, normal);
-    
-    // Day / night color
     float dayMix = smoothstep(-0.25,0.5,sunOrientation);
     vec3 dayColor = texture(uDayTexture, vUv).rgb;
     vec3 nightColor = texture(uNightTexture, vUv).rgb;
     color = mix(nightColor, dayColor, dayMix);
 
-    // Specular clouds color
     vec2 specularCloudsColor = texture(uSpecularCloudsTexture, vUv).rg;
 
-    //Clouds
     float cloudsMix = smoothstep(0.5,1.0,specularCloudsColor.g);
     cloudsMix *= dayMix;
     color = mix(color,vec3(1.0),cloudsMix);
 
-    //fresnel
     float fresnel = 1.0 + dot(viewDirection, normal);
     fresnel = pow(fresnel,2.0);
 
-    // Atmosphere
     float atmosphereDayMix = smoothstep(-0.5, 1.0, sunOrientation);
     vec3 atmosphereColor = mix(uAtmosphereTwilightColor, uAtmosphereDayColor, atmosphereDayMix);
     color = mix(color,atmosphereColor,fresnel*atmosphereDayMix);
 
-    //Specular
     vec3 reflection = reflect(-uSunDirection, normal);
     float specular = -dot(reflection, viewDirection);
     specular = max(specular, 0.0);
@@ -83,34 +70,28 @@ void main()
     vec3 specularColor = mix(vec3(1.0),atmosphereColor,fresnel);
     color += specular * specularColor;
 
-    // Final color
     gl_FragColor = vec4(color, 1.0);
     #include <tonemapping_fragment>
     #include <colorspace_fragment>
 }
 `;
 
-// Updated Atmosphere Vertex Shader
+// Atmosphere Vertex Shader
 const atmosphereVertexShader = `
 varying vec3 vNormal;
 varying vec3 vPosition;
 
 void main()
 {
-    // Position
     vec4 modelPosition = modelMatrix * vec4(position, 1.0);
     gl_Position = projectionMatrix * viewMatrix * modelPosition;
-
-    // Model normal
     vec3 modelNormal = (modelMatrix * vec4(normal, 0.0)).xyz;
-
-    // Varyings
     vNormal = modelNormal;
     vPosition = modelPosition.xyz;
 }
 `;
 
-// Updated Atmosphere Fragment Shader
+// Atmosphere Fragment Shader
 const atmosphereFragmentShader = `
 uniform vec3 uSunDirection;
 uniform vec3 uAtmosphereDayColor;
@@ -125,16 +106,13 @@ void main()
     vec3 normal = normalize(vNormal);
     vec3 color = vec3(0.0);
 
-    // Sun orientation
     float sunOrientation = dot(uSunDirection, normal);
 
-    // Atmosphere
     float atmosphereDayMix = smoothstep(- 0.5, 1.0, sunOrientation);
     vec3 atmosphereColor = mix(uAtmosphereTwilightColor, uAtmosphereDayColor, atmosphereDayMix);
     color = mix(color, atmosphereColor, atmosphereDayMix);
     color += atmosphereColor;
 
-    // Alpha
     float edgeAlpha = dot(viewDirection, normal);
     edgeAlpha = smoothstep(0.0, 0.5, edgeAlpha);
 
@@ -142,7 +120,6 @@ void main()
 
     float alpha = edgeAlpha * dayAlpha;
 
-    // Final color
     gl_FragColor = vec4(color, alpha);
     #include <tonemapping_fragment>
     #include <colorspace_fragment>
@@ -211,10 +188,10 @@ function Earth({
 
   return (
     <group rotation={[0, -Math.PI / 2, 0]}>
-      <Sphere args={[1.5, 64, 64]} ref={earthRef}>
+      <Sphere args={[1.4, 64, 64]} ref={earthRef}>
         <primitive object={earthMaterial} attach="material" />
       </Sphere>
-      <Sphere args={[1.6, 64, 64]} ref={atmosphereRef}>
+      <Sphere args={[1.5, 64, 64]} ref={atmosphereRef}>
         <primitive object={atmosphereMaterial} attach="material" />
       </Sphere>
     </group>

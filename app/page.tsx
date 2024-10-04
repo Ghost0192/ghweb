@@ -32,7 +32,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overscroll-none">
       <section className="h-screen w-full overflow-hidden">
         <Landing />
       </section>

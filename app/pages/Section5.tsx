@@ -18,7 +18,7 @@ const Section5 = () => {
   return (
     <section className="relative w-full min-h-screen bg-white overflow-hidden">
       <div className="bg-white max-w-6xl mx-auto px-4 pt-12 pb-0 min-h-full flex flex-col">
-        <header className="flex justify-between items-center mb-8">
+        <header className="flex justify-between items-center mb-0">
           <h1 className="text-2xl font-light">Our Presence</h1>
           <div className="text-sm">02</div>
         </header>
