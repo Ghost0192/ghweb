@@ -91,15 +91,18 @@ export default function Landing() {
           theme === "dark" ? "bg-black text-white" : "bg-white text-black"
         } z-50 flex items-center justify-center`}
       >
-        <div>GRUPO HIJUELAS</div>
+        <div className="text-2xl font-bold">GRUPO HIJUELAS</div>
       </div>
-      <div ref={contentRef} className="relative h-screen w-full opacity-0">
+      <div
+        ref={contentRef}
+        className="relative h-screen w-full opacity-0 overflow-hidden"
+      >
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 min-h-full min-w-full object-cover -z-1"
+          className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/assets/videos/landing.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -107,14 +110,17 @@ export default function Landing() {
 
         <div className="absolute inset-0 bg-black bg-opacity-30 z-10" />
 
-        <div className="absolute inset-0 z-20 flex flex-col justify-center items-end p-8 md:p-16 lg:p-24">
-          <div className="max-w-4xl text-right">
+        <div className="absolute inset-0 z-20 flex flex-col justify-center items-end p-4 sm:p-8 md:p-16 lg:p-24">
+          <div className="w-full max-w-4xl text-right">
             <div
               ref={textRef}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold text-white leading-tight mb-6"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white leading-tight mb-6"
             >
               {texts[language].map((line, lineIndex) => (
-                <div key={lineIndex} className="line whitespace-nowrap">
+                <div
+                  key={lineIndex}
+                  className="line whitespace-normal sm:whitespace-nowrap mb-2"
+                >
                   {line.split("").map((char, charIndex) => (
                     <span
                       key={charIndex}
@@ -132,11 +138,11 @@ export default function Landing() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 text-white text-center">
-          <p className="text-sm mb-2">
+        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30 text-white text-center">
+          <p className="text-xs sm:text-sm mb-2">
             {language === "en" ? "Scroll Down" : "Desplázate hacia abajo"}
           </p>
-          <ChevronDown className="w-6 h-6 mx-auto animate-bounce" />
+          <ChevronDown className="w-4 h-4 sm:w-6 sm:h-6 mx-auto animate-bounce" />
         </div>
       </div>
     </>
