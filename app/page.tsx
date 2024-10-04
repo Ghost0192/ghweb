@@ -32,8 +32,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen ">
-      <section className=" h-screen w-full overflow-hidden">
+    <div className="min-h-screen">
+      <section className="h-screen w-full overflow-hidden">
         <Landing />
       </section>
       <section className="h-screen w-full">
@@ -45,7 +45,7 @@ export default function Home() {
       <section className="h-screen w-full bg-blue-300 flex items-center justify-center overflow-hidden">
         <Section3 />
       </section>
-      <section className="h-screen w-full bg-black ">
+      <section className="h-[210vh] w-full bg-black">
         <Section4 />
       </section>
       <section className="h-screen w-full bg-gray-300 flex items-center justify-center overflow-hidden">

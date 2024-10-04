@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import styles from "../../styles/section4.module.scss";
 
 export default function Section4() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -99,14 +99,14 @@ export default function Section4() {
   return (
     <div
       ref={sectionRef}
-      className="bg-black text-white h-screen overflow-y-auto"
+      className={`${styles.container} bg-black text-white h-[300vh] overflow-y-auto`}
     >
-      <div className="max-w-6xl mx-auto px-4 py-12 min-h-full flex flex-col">
-        <header className="flex justify-between items-center mb-16">
+      <div className="max-w-6xl mx-auto px-4 pt-12 pb-0 min-h-full flex flex-col">
+        <header className="flex justify-between items-center ">
           <h1 className="text-2xl font-light">Our Values</h1>
           <div className="text-sm">01</div>
         </header>
-
+        <hr className=" border-gray-700 pb-16" />
         <div className="flex-grow flex flex-col justify-between">
           {values.map((value, index) => (
             <div
@@ -114,7 +114,7 @@ export default function Section4() {
               className="flex flex-col md:flex-row md:space-x-8 mb-24 md:mb-32 last:mb-0"
             >
               <div className="md:w-2/5 mb-4 md:mb-0">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-light sticky top-24">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold sticky top-24">
                   {splitWords(value.title, titleRefs)}
                 </h2>
               </div>
@@ -123,7 +123,7 @@ export default function Section4() {
                   <p
                     key={pIndex}
                     className={`text-xl font-light ${
-                      pIndex === 1 ? "text-gray-400" : "text-gray-300"
+                      pIndex === 1 ? "text-white" : "text-gray-300"
                     }`}
                   >
                     {splitWords(paragraph, contentRefs)}
@@ -133,18 +133,6 @@ export default function Section4() {
             </div>
           ))}
         </div>
-      </div>
-      <div className="fixed bottom-8 right-8">
-        <Button
-          onClick={() => {
-            if (sectionRef.current) {
-              sectionRef.current.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-          className="bg-white text-black hover:bg-gray-200"
-        >
-          Back to Top
-        </Button>
       </div>
     </div>
   );
