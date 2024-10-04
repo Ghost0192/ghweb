@@ -4,11 +4,12 @@ import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import Landing from "./pages/Landing";
 import Section1 from "./pages/Section1";
-// import Section2 from "./pages/Section2";
+import Section2 from "./pages/Section2";
 import Section3 from "./pages/Section3";
 import Section4 from "./pages/Section4";
 import Section5 from "./pages/Section5";
 import Footer from "../components/shared/footer/index";
+import Section6 from "./pages/Section6";
 
 export default function Home() {
   useEffect(() => {
@@ -39,9 +40,7 @@ export default function Home() {
         <section className=" w-full">
           <Section1 />
         </section>
-        {/* <section className="min-h-[100svh] w-full bg-black">
-          <Section2 />
-        </section> */}
+
         <section className="w-full bg-white">
           <Section3 />
         </section>
@@ -51,10 +50,11 @@ export default function Home() {
         <section className="min-h-[100svh] w-full">
           <Section5 />
         </section>
-        <section className="min-h-[100svh] w-full bg-yellow-300 flex items-center justify-center p-4">
-          <h2 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center">
-            Section 6
-          </h2>
+        <section className="min-h-[100svh] w-full bg-white">
+          <Section2 />
+        </section>
+        <section className="min-h-[100svh] w-full bg-black">
+          <Section6 />
         </section>
         <section className="bg-[#094F30]">
           <Footer />

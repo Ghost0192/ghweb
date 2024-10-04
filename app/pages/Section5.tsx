@@ -52,7 +52,7 @@ const Section5 = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-5xl lg:text-7xl xl:text-8xl font-bold  lg:top-24">
+                <h3 className="text-5xl lg:text-7xl xl:text-7xl font-bold  lg:top-24">
                   Mexico
                 </h3>
                 <p className="text-sm md:text-base">
