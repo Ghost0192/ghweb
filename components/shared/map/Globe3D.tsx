@@ -188,10 +188,10 @@ function Earth({
 
   return (
     <group rotation={[0, -Math.PI / 2, 0]}>
-      <Sphere args={[1.4, 64, 64]} ref={earthRef}>
+      <Sphere args={[1.6, 64, 64]} ref={earthRef}>
         <primitive object={earthMaterial} attach="material" />
       </Sphere>
-      <Sphere args={[1.5, 64, 64]} ref={atmosphereRef}>
+      <Sphere args={[1.7, 64, 64]} ref={atmosphereRef}>
         <primitive object={atmosphereMaterial} attach="material" />
       </Sphere>
     </group>

@@ -12,7 +12,7 @@ export default function Section3() {
         <hr className="border-gray-700 pb-12" />
 
         {/* Description Section with Bold Black Text */}
-        <p className="text-3xl font-bold text-black leading-snug mt-6">
+        <p className="text-5xl md:text-7xl lg:text-7xl xl:text-7xl font-bold  lg:top-24 mb-4">
           Our model contemplates full vertical integration, ensuring the quality
           of our products and enabling rapid scalability to meet our
           clients&apos; needs.
@@ -22,44 +22,6 @@ export default function Section3() {
       {/* Main Content Section */}
       <div className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         {/* First Box: Split into three sections with images and titles */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-100 rounded-lg p-8 flex flex-col justify-center items-center h-64">
-            <h2 className="text-lg font-bold mb-4">Vitro Propagation</h2>
-            <div className="mix-blend-darken bg-gray-100 p-4">
-              <Image
-                src="/assets/images/vitro.webp"
-                alt="Plant in tissue culture"
-                width={150}
-                height={150}
-                className="object-contain"
-              />
-            </div>
-          </div>
-          <div className="bg-gray-100 rounded-lg p-8 flex flex-col justify-center items-center h-64">
-            <h2 className="text-lg font-bold mb-4">Hardening</h2>
-            <div className="mix-blend-darken bg-gray-100 p-4">
-              <Image
-                src="/assets/images/tray.webp"
-                alt="Plants in trays"
-                width={150}
-                height={150}
-                className="object-contain"
-              />
-            </div>
-          </div>
-          <div className="bg-gray-100 rounded-lg p-8 flex flex-col justify-center items-center h-64">
-            <h2 className="text-lg font-bold mb-4">Plant Nursery</h2>
-            <div className="mix-blend-darken bg-gray-100 p-4">
-              <Image
-                src="/assets/images/pot.webp"
-                alt="Plant in pot"
-                width={150}
-                height={150}
-                className="object-contain"
-              />
-            </div>
-          </div>
-        </div>
 
         {/* Second Box: Full-width with fixed height */}
         <div className="bg-gray-100 rounded-lg p-8 flex justify-center items-center mb-16 h-64">

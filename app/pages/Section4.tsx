@@ -103,14 +103,14 @@ export default function Section4() {
           <div className="text-xl">02</div>
         </header>
         <hr className="border-gray-700 mb-24" />
-        <div className="space-y-64">
+        <div className="space-y-40">
           {values.map((value, index) => (
             <div
               key={index}
               className="flex flex-col lg:flex-row lg:space-x-16"
             >
               <div className="lg:w-1/2 mb-8 lg:mb-0">
-                <h2 className="text-6xl lg:text-7xl xl:text-8xl font-bold lg:sticky lg:top-24">
+                <h2 className="text-6xl lg:text-7xl xl:text-7xl font-bold lg:sticky lg:top-24">
                   {splitWords(value.title, titleRefs)}
                 </h2>
               </div>

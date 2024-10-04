@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import Landing from "./pages/Landing";
 import Section1 from "./pages/Section1";
-import Section2 from "./pages/Section2";
+// import Section2 from "./pages/Section2";
 import Section3 from "./pages/Section3";
 import Section4 from "./pages/Section4";
 import Section5 from "./pages/Section5";
@@ -39,9 +39,9 @@ export default function Home() {
         <section className=" w-full">
           <Section1 />
         </section>
-        <section className="min-h-[100svh] w-full bg-black">
+        {/* <section className="min-h-[100svh] w-full bg-black">
           <Section2 />
-        </section>
+        </section> */}
         <section className="w-full bg-white">
           <Section3 />
         </section>
