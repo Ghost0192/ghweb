@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <div className="max-w-[410px] se:max-w-[400px] 12pro:max-w-[410px] xr:max-w-none mx-auto overflow-hidden">
+      <div className="max-w-[410px] se:max-w-[400px] 12pro:max-w-[410px] xr:max-w-none mx-auto ">
         <section className="h-[100svh] w-full overflow-hidden">
           <Landing />
         </section>
