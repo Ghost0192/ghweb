@@ -51,10 +51,12 @@ export default function Home() {
       <section className="h-[170vh] custom:h-screen w-full overflow-hidden">
         <Section5 />
       </section>
-      <section className="h-screen w-full bg-yellow-300 flex items-center justify-center overflow-hidden">
+      <section className="h-[100vh] w-full bg-yellow-300 flex items-center justify-center overflow-none">
         <h2 className="text-4xl font-bold">Section 3</h2>
       </section>
-      <Footer />
+      <div className="bg-[#094F30]">
+        <Footer />
+      </div>
     </div>
   );
 }
