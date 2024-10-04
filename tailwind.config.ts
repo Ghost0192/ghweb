@@ -63,6 +63,11 @@ const config: Config = {
       },
       screens: {
         custom: "766px",
+        xs: "360px",
+        se: "375px",
+        ip12: "390px",
+        xr: "414px",
+        ip14: "430px",
       },
     },
   },
