@@ -12,12 +12,13 @@ export default function Section7() {
       </div>
       <div className="flex-grow flex items-center max-w-6xl mx-auto px-4 w-full">
         <div className="w-full">
-          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-none mb-4">
+          {/* Updated font sizes */}
+          <h2 className="text-8xl sm:text-[7rem] md:text-[9rem] lg:text-[10rem] xl:text-[12rem] font-bold leading-none mb-4">
             What we do <br />
             best
           </h2>
           <div className="flex justify-start">
-            <ul className="text-sm sm:text-base space-y-1 text-left">
+            <ul className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl space-y-1 text-left font-bold">
               <li>Propagation</li>
               <li>Hardening</li>
               <li>Plant Nursery</li>

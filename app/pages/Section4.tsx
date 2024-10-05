@@ -9,38 +9,33 @@ export default function Section4() {
 
   const values = [
     {
-      title: "Surpass Goals",
+      title: "Responsibility",
       content: [
-        "We strive to understand the challenging areas of the businesses that we work with.",
-        "By leveraging cutting-edge technology, we strive to create a broader impact that drives meaningful progress and innovation across industries.",
+        "We commit to fulfilling agreements and duties with the highest level of integrity. By embracing responsibility, we ensure accountability in all actions and results, fostering trust within our team and with our partners.",
       ],
     },
     {
-      title: "Innovate Continuously",
+      title: "Respect",
       content: [
-        "We embrace change and constantly seek new ways to improve our products and services.",
-        "Our team is encouraged to think outside the box, challenging conventional wisdom to stay ahead of industry trends and customer needs.",
+        "We recognize, care for, and value both people and the environment. Respect is fundamental in building strong, positive relationships and ensuring that our impact on the world is both ethical and sustainable.",
       ],
     },
     {
-      title: "Empower Teams",
+      title: "Passion",
       content: [
-        "We believe in the power of collaborative and autonomous teams.",
-        "Our flat organizational structure promotes quick decision-making and personal responsibility, fostering an inclusive environment where diverse perspectives are valued.",
+        "Passion drives us to work with enthusiasm, dedication, and resilience. Our passion motivates and inspires others, creating a culture of creativity and innovation that fuels personal and organizational growth.",
       ],
     },
     {
-      title: "Customer Centric",
+      title: "Honesty",
       content: [
-        "Our customers are at the heart of everything we do.",
-        "We actively seek and act on customer feedback to improve our products and services, striving to build long-term relationships based on trust and mutual success.",
+        "We act with integrity and sincerity in everything we do. Honesty is the foundation of our decision-making process, enabling transparent communication and fostering long-lasting relationships built on trust.",
       ],
     },
     {
-      title: "Sustainable Growth",
+      title: "Excellence",
       content: [
-        "We believe in growing our business responsibly and sustainably.",
-        "Environmental considerations are integrated into our decision-making processes, balancing profitability with social and environmental responsibility.",
+        "We are committed to constantly seeking quality, efficiency, and improvement in everything we do. Excellence is not just a goal but a mindset that drives us to push boundaries and set new standards in all aspects of our work.",
       ],
     },
   ];
@@ -110,13 +105,13 @@ export default function Section4() {
               className="flex flex-col lg:flex-row lg:space-x-16"
             >
               <div className="lg:w-1/2 mb-8 lg:mb-0">
-                <h2 className="text-6xl lg:text-7xl xl:text-7xl font-bold lg:sticky lg:top-24">
+                <h2 className="text-5xl lg:text-7xl xl:text-7xl font-bold lg:sticky lg:top-24">
                   {splitWords(value.title, titleRefs)}
                 </h2>
               </div>
               <div className="lg:w-1/2 space-y-8">
                 {value.content.map((paragraph, pIndex) => (
-                  <p key={pIndex} className="text-2xl font-light text-gray-300">
+                  <p key={pIndex} className="text-3xl font-light text-gray-300">
                     {splitWords(paragraph, contentRefs)}
                   </p>
                 ))}
