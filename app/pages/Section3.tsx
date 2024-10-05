@@ -17,7 +17,7 @@ export default function Section3() {
         <p className="text-5xl md:text-7xl lg:text-7xl xl:text-7xl font-bold mb-12">
           Our model contemplates full vertical integration, ensuring the quality
           of our products and enabling rapid scalability to meet our
-          clients&apos; needs.
+          client&apos;s needs.
         </p>
       </div>
 

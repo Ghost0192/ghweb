@@ -48,7 +48,7 @@ export default function Home() {
         <section className="w-full bg-white overflow-hidden">
           <Section3 />
         </section>
-        <section className="w-full bg-black overflow-hidden">
+        <section className="w-full bg-black ">
           <Section4 />
         </section>
         <section className="min-h-screen w-full overflow-hidden">
