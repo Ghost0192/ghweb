@@ -110,11 +110,11 @@ export default function Landing() {
 
         <div className="absolute inset-0 bg-black bg-opacity-30 z-10" />
 
-        <div className="absolute inset-0 z-20 flex flex-col justify-center items-end p-4 sm:p-8 md:p-16 lg:p-24">
+        <div className="absolute inset-0 z-20 flex flex-col justify-center items-end p-4 sm:p-8 md:p-12 lg:p-16 xl:p-24">
           <div className="w-full max-w-4xl text-right">
             <div
               ref={textRef}
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white leading-tight mb-6"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-white leading-tight mb-6"
             >
               {texts[language].map((line, lineIndex) => (
                 <div
@@ -138,7 +138,7 @@ export default function Landing() {
           </div>
         </div>
 
-        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30 text-white text-center">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 text-white text-center">
           <p className="text-xs sm:text-sm mb-2">
             {language === "en" ? "Scroll Down" : "Desplázate hacia abajo"}
           </p>

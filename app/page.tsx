@@ -10,6 +10,7 @@ import Section4 from "./pages/Section4";
 import Section5 from "./pages/Section5";
 import Footer from "../components/shared/footer/index";
 import Section6 from "./pages/Section6";
+import Section7 from "./pages/Section7";
 
 export default function Home() {
   useEffect(() => {
@@ -32,31 +33,39 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <div className="max-w-[410px] se:max-w-[400px] 12pro:max-w-[410px] xr:max-w-none mx-auto ">
-        <section className="h-[100svh] w-full overflow-hidden">
+    <div className="min-h-screen ">
+      <div className="w-full max-w-full mx-auto">
+        {/* Landing section */}
+        <section className="h-screen w-full overflow-hidden">
           <Landing />
         </section>
-        <section className=" w-full">
+
+        <section className="w-full ">
           <Section1 />
         </section>
 
-        <section className="w-full bg-white">
+        {/* Other sections with overflow hidden */}
+        <section className="w-full bg-white overflow-hidden">
           <Section3 />
         </section>
-        <section className="w-full bg-black">
+        <section className="w-full bg-black overflow-hidden">
           <Section4 />
         </section>
-        <section className="min-h-[100svh] w-full">
+        <section className="min-h-screen w-full overflow-hidden">
           <Section5 />
         </section>
-        <section className="min-h-[100svh] w-full bg-white">
+        <section className="min-h-screen w-full bg-white overflow-hidden">
+          <Section7 />
+        </section>
+        <section className="min-h-screen w-full bg-white overflow-hidden">
           <Section2 />
         </section>
-        <section className="min-h-[100svh] w-full bg-black">
+        <section className="min-h-screen w-full bg-black overflow-hidden">
           <Section6 />
         </section>
-        <section className="bg-[#094F30]">
+
+        {/* Footer */}
+        <section className="w-full bg-[#094F30] overflow-hidden">
           <Footer />
         </section>
       </div>

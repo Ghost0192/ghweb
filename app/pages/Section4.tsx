@@ -97,10 +97,10 @@ export default function Section4() {
 
   return (
     <div ref={sectionRef} className={` bg-black text-white`}>
-      <div className="max-w-7xl mx-auto px-4 py-24">
+      <div className="max-w-6xl mx-auto px-4 py-24">
         <header className="flex justify-between items-center mb-2">
-          <h1 className="text-4xl font-light">Our Values</h1>
-          <div className="text-xl">02</div>
+          <h1 className="text-2xl font-light">Our Values</h1>
+          <div className="text-sm">02</div>
         </header>
         <hr className="border-gray-700 mb-24" />
         <div className="space-y-40">
