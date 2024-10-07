@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 
 const logos = [
-  "/placeholder-logo.svg",
-  "/placeholder-logo.svg",
-  "/placeholder-logo.svg",
-  "/placeholder-logo.svg",
-  "/placeholder-logo.svg",
-  "/placeholder-logo.svg",
+  "/assets/images/BQS-logo.png",
+  "/assets/images/BQS-logo.png",
+  "/assets/images/BQS-logo.png",
+  "/assets/images/BQS-logo.png",
+  "/assets/images/BQS-logo.png",
+  "/assets/images/BQS-logo.png",
 ];
 
 export default function LogoBanner() {

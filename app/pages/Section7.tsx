@@ -19,11 +19,11 @@ export default function Section7() {
           </h2>
           <div className="flex justify-start">
             <ul className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl space-y-1 text-left font-bold">
-              <li>Propagation</li>
-              <li>Hardening</li>
-              <li>Plant Nursery</li>
-              <li>Farm</li>
-              <li>Fruit Export</li>
+              <li>Plant Propagation</li>
+              <li>Plant Hardening</li>
+              <li>Plant Growth</li>
+              <li>Agricultural Development</li>
+              {/* <li>Fruit Export</li> */}
             </ul>
           </div>
         </div>

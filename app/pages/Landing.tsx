@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { gsap } from "gsap";
 import StyledButton from "@/components/shared/button/StyledButton";
 import { useLanguage } from "../../context/language";
+import AnimatedLogo from "@/components/shared/logo";
 
 const texts = {
   en: [
@@ -33,7 +34,7 @@ export default function Landing() {
     // Loading animation
     tl.to(loadingRef.current, {
       opacity: 1,
-      duration: 1,
+      duration: 0.4,
       onComplete: () => {
         tl.to(loadingRef.current, {
           opacity: 0,
@@ -87,11 +88,17 @@ export default function Landing() {
     <>
       <div
         ref={loadingRef}
-        className={`fixed inset-0 ${
-          theme === "dark" ? "bg-black text-white" : "bg-white text-black"
-        } z-50 flex items-center justify-center`}
+        className="fixed inset-0 bg-[#F2F2F2] z-50 flex flex-col items-center justify-center p-4"
       >
-        <div className="text-2xl font-bold">GRUPO HIJUELAS</div>
+        <div className="flex flex-col lg:flex-row items-center">
+          <div className="text-[#0A5F3C] font-bold text-center lg:text-left mb-4 lg:mb-0 lg:mr-4">
+            <div className="text-5xl sm:text-6xl lg:text-7xl">GRUPO</div>
+            <div className="text-5xl sm:text-6xl lg:text-7xl">HIJUELAS</div>
+          </div>
+          <div className="mt-4 lg:mt-0">
+            <AnimatedLogo />
+          </div>
+        </div>
       </div>
       <div
         ref={contentRef}
