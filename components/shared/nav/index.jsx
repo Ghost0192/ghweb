@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { height } from "../anim";
 import Body from "./Body";
 import Footer from "./Footer";
-import Image from "./Image";
 
 const links = [
   {
@@ -48,11 +47,6 @@ export default function Index() {
           />
           <Footer />
         </div>
-        <Image
-          src={links[selectedLink.index].src}
-          isActive={selectedLink.isActive}
-          alt={links[selectedLink.index].title}
-        />
       </div>
     </motion.div>
   );

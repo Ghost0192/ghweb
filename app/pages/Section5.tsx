@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import dynamic from "next/dynamic";
 import LocationBadge from "@/components/shared/badge";
@@ -17,13 +19,13 @@ const Globe3D = dynamic(
 const Section5 = () => {
   return (
     <section className="relative w-full min-h-screen bg-white">
-      <div className="bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 min-h-full flex flex-col">
+      <div className="max-w-6xl mx-auto px-4 py-24">
         <header className="flex justify-between items-center mb-2">
           <h1 className="text-2xl font-light">Our Presence</h1>
           <div className="text-sm">03</div>
         </header>
-        <hr className="border-gray-700 mb-8" />
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 lg:mb-12">
+        <hr className="border-gray-700 mb-24" />
+        <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 lg:mb-12">
           We bring solutions worldwide
         </h2>
         <div className="flex flex-col lg:flex-row flex-grow">
