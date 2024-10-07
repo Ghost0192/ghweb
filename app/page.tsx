@@ -11,6 +11,7 @@ import Section5 from "./pages/Section5";
 import Footer from "../components/shared/footer/index";
 import Section6 from "./pages/Section6";
 import Section7 from "./pages/Section7";
+import Section8 from "./pages/Section8";
 
 export default function Home() {
   useEffect(() => {
@@ -38,6 +39,9 @@ export default function Home() {
         {/* Landing section */}
         <section className="h-screen w-full overflow-hidden">
           <Landing />
+        </section>
+        <section className="min-h-screen w-full overflow-hidden">
+          <Section8 />
         </section>
 
         <section className="w-full ">
