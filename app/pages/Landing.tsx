@@ -26,7 +26,7 @@ export default function Landing() {
   const loadingRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
-  const { theme, language } = useLanguage();
+  const { language } = useLanguage();
 
   useEffect(() => {
     const tl = gsap.timeline();
