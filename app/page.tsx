@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import Landing from "./pages/Landing";
-import Section1 from "./pages/Section1";
 import Section2 from "./pages/Section2";
 import Section3 from "./pages/Section3";
 import Section4 from "./pages/Section4";
@@ -43,10 +42,6 @@ export default function Home() {
         <section className="h-[280vh] w-full">
           <Section8 />
         </section>
-
-        {/* <section className="w-full ">
-          <Section1 />
-        </section> */}
 
         {/* Other sections with overflow hidden */}
         <section className="w-full bg-white overflow-hidden">
