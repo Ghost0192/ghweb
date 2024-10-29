@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Section7() {
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col">
+    <div className="bg-white text-black min-h-screen flex flex-col">
       <div className="max-w-6xl mx-auto px-4 pt-12 pb-4 w-full">
         <header className="flex justify-between items-center mb-2">
           <h1 className="text-2xl font-light">Our Value Proposition</h1>
@@ -20,9 +20,8 @@ export default function Section7() {
           <div className="flex justify-start">
             <ul className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl space-y-1 text-left font-bold">
               <li>Plant Propagation</li>
-              <li>Plant Hardening</li>
-              <li>Plant Growth</li>
               <li>Agricultural Development</li>
+              <li>R&D</li>
               {/* <li>Fruit Export</li> */}
             </ul>
           </div>

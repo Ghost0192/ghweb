@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import Landing from "./pages/Landing";
-import Section2 from "./pages/Section2";
+
 import Section3 from "./pages/Section3";
 import Section4 from "./pages/Section4";
 import Section5 from "./pages/Section5";
@@ -39,7 +39,7 @@ export default function Home() {
         <section className="h-screen w-full overflow-hidden">
           <Landing />
         </section>
-        <section className="h-[280vh] w-full">
+        <section className="h-[200vh] w-full">
           <Section8 />
         </section>
 
@@ -56,9 +56,7 @@ export default function Home() {
         <section className="min-h-screen w-full bg-white overflow-hidden">
           <Section7 />
         </section>
-        <section className="min-h-screen w-full bg-white overflow-hidden">
-          <Section2 />
-        </section>
+
         <section className="min-h-screen w-full bg-black overflow-hidden">
           <Section6 />
         </section>
