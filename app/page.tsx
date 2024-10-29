@@ -40,13 +40,13 @@ export default function Home() {
         <section className="h-screen w-full overflow-hidden">
           <Landing />
         </section>
-        <section className="min-h-screen w-full overflow-hidden">
+        <section className="h-[280vh] w-full">
           <Section8 />
         </section>
 
-        <section className="w-full ">
+        {/* <section className="w-full ">
           <Section1 />
-        </section>
+        </section> */}
 
         {/* Other sections with overflow hidden */}
         <section className="w-full bg-white overflow-hidden">
