@@ -35,9 +35,6 @@ const crops = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-800">
-      {/* Cover Page */}
-      {/* <section className="min-h-screen flex flex-col justify-center p-8"></section> */}
-
       {/* Mission Page */}
       <section className="min-h-screen flex flex-col justify-center p-8">
         <div className="max-w-8xl mx-auto w-full">
@@ -143,7 +140,7 @@ export default function Home() {
           <div>
             <h3 className="text-2xl font-bold mb-4">Theme 1</h3>
             <p className="mb-4">
-              A very important finding that we uncovered. It's one of the
+              A very important finding that we uncovered. It&apos;s one of the
               biggest takeaways from this report, so we highlight it here.
             </p>
             <p>
@@ -154,7 +151,7 @@ export default function Home() {
           <div>
             <h3 className="text-2xl font-bold mb-4">Theme 2</h3>
             <p className="mb-4">
-              A very important finding that we uncovered. It's one of the
+              A very important finding that we uncovered. It&apos;s one of the
               biggest takeaways from this report, so we highlight it here.
             </p>
             <p>
@@ -165,7 +162,7 @@ export default function Home() {
           <div>
             <h3 className="text-2xl font-bold mb-4">Theme 3</h3>
             <p className="mb-4">
-              A very important finding that we uncovered. It's one of the
+              A very important finding that we uncovered. It&apos;s one of the
               biggest takeaways from this report, so we highlight it here.
             </p>
             <p>
