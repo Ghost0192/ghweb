@@ -22,6 +22,8 @@ export default function Section7() {
               <li>Plant Propagation</li>
               <li>Agricultural Development</li>
               <li>R&D</li>
+              <li>Ip Management</li>
+              <li>Home & Garden</li>
               {/* <li>Fruit Export</li> */}
             </ul>
           </div>

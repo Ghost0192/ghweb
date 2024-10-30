@@ -11,31 +11,29 @@ export default function Section4() {
     {
       title: "Responsibility",
       content: [
-        "We commit to fulfilling agreements and duties with the highest level of integrity. By embracing responsibility, we ensure accountability in all actions and results, fostering trust within our team and with our partners.",
+        "Fulfill agreements and duties with integrity, committing to achieving results.",
       ],
     },
     {
       title: "Respect",
       content: [
-        "We recognize, care for, and value both people and the environment. Respect is fundamental in building strong, positive relationships and ensuring that our impact on the world is both ethical and sustainable.",
+        "Recognize, care for, and value both people and the environment.",
       ],
     },
     {
       title: "Passion",
       content: [
-        "Passion drives us to work with enthusiasm, dedication, and resilience. Our passion motivates and inspires others, creating a culture of creativity and innovation that fuels personal and organizational growth.",
+        "Work with enthusiasm, dedication, and resilience, motivating and inspiring others.",
       ],
     },
     {
       title: "Honesty",
-      content: [
-        "We act with integrity and sincerity in everything we do. Honesty is the foundation of our decision-making process, enabling transparent communication and fostering long-lasting relationships built on trust.",
-      ],
+      content: ["Act with integrity, always valuing sincerity."],
     },
     {
       title: "Excellence",
       content: [
-        "We are committed to constantly seeking quality, efficiency, and improvement in everything we do. Excellence is not just a goal but a mindset that drives us to push boundaries and set new standards in all aspects of our work.",
+        "Constantly strive for quality, efficiency, and improvement in everything we do.",
       ],
     },
   ];
@@ -91,7 +89,7 @@ export default function Section4() {
   }, []);
 
   return (
-    <div ref={sectionRef} className={` bg-black text-white`}>
+    <div ref={sectionRef} className={` bg-[#595959] text-white`}>
       <div className="max-w-6xl mx-auto px-4 py-24">
         <header className="flex justify-between items-center mb-2">
           <h1 className="text-2xl font-light">Our Values</h1>
@@ -111,7 +109,7 @@ export default function Section4() {
               </div>
               <div className="lg:w-1/2 space-y-8">
                 {value.content.map((paragraph, pIndex) => (
-                  <p key={pIndex} className="text-3xl font-light text-gray-300">
+                  <p key={pIndex} className="text-6xl font-light text-gray-300">
                     {splitWords(paragraph, contentRefs)}
                   </p>
                 ))}

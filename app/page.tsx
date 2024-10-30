@@ -11,6 +11,7 @@ import Footer from "../components/shared/footer/index";
 import Section6 from "./pages/Section6";
 import Section7 from "./pages/Section7";
 import Section8 from "./pages/Section8";
+import Section9 from "./pages/Section9";
 
 export default function Home() {
   useEffect(() => {
@@ -39,13 +40,21 @@ export default function Home() {
         <section className="h-screen w-full overflow-hidden">
           <Landing />
         </section>
-        <section className="h-[200vh] w-full">
+        <section className="h-[300vh] w-full">
           <Section8 />
         </section>
+
+        <section className="min-h-screen w-full bg-black overflow-hidden"></section>
 
         {/* Other sections with overflow hidden */}
         <section className="w-full bg-white overflow-hidden">
           <Section3 />
+        </section>
+        <section className="w-full bg-white overflow-hidden">
+          <Section9 />
+        </section>
+        <section className="h-[70vh] w-full bg-white overflow-hidden">
+          <Section6 />
         </section>
         <section className="w-full bg-black ">
           <Section4 />
@@ -55,10 +64,6 @@ export default function Home() {
         </section>
         <section className="min-h-screen w-full bg-white overflow-hidden">
           <Section7 />
-        </section>
-
-        <section className="min-h-screen w-full bg-black overflow-hidden">
-          <Section6 />
         </section>
 
         {/* Footer */}
